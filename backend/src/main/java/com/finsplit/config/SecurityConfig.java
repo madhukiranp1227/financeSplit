@@ -49,7 +49,7 @@ public class SecurityConfig {
         if (allowedOrigins != null && !allowedOrigins.isBlank()) {
             config.setAllowedOrigins(List.of(allowedOrigins.split(",")));
         } else {
-            config.setAllowedOrigins(List.of("http://localhost:5173", "http://localhost:3000", "http://localhost:5174"));
+            config.setAllowedOrigins(List.of("http://localhost:5173", "http://localhost:3000", "http://localhost:5174", "http://localhost:3001"));
         }
         config.setAllowedMethods(List.of("GET","POST","PUT","DELETE","PATCH","OPTIONS"));
         config.setAllowedHeaders(List.of("*"));

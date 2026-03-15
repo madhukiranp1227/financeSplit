@@ -52,24 +52,24 @@ public class GroupService {
                 .type(req.getType() != null ? req.getType() : Group.GroupType.OTHER)
                 .createdBy(creator)
                 .build();
-        group = groupRepository.save(group);
+        final Group savedGroup = groupRepository.save(group);
 
         // Add creator as admin
         memberRepository.save(GroupMember.builder()
-                .group(group).user(creator).role(GroupMember.Role.ADMIN).build());
+                .group(savedGroup).user(creator).role(GroupMember.Role.ADMIN).build());
 
         // Add other members
         if (req.getMemberEmails() != null) {
             for (String email : req.getMemberEmails()) {
                 userRepository.findByEmail(email).ifPresent(u -> {
-                    if (!memberRepository.existsByGroupAndUser(group, u)) {
+                    if (!memberRepository.existsByGroupAndUser(savedGroup, u)) {
                         memberRepository.save(GroupMember.builder()
-                                .group(group).user(u).role(GroupMember.Role.MEMBER).build());
+                                .group(savedGroup).user(u).role(GroupMember.Role.MEMBER).build());
                     }
                 });
             }
         }
-        return group;
+        return savedGroup;
     }
 
     public void addMember(Long groupId, String email) {
