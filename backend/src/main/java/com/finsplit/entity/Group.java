@@ -21,6 +21,7 @@ public class Group {
     @Enumerated(EnumType.STRING)
     private GroupType type; // TRIP, HOME, FRIENDS, WORK, OTHER
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "created_by_id")
     private User createdBy;

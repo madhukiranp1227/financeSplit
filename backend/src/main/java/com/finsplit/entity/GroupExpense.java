@@ -27,6 +27,7 @@ public class GroupExpense {
     @JoinColumn(name = "group_id", nullable = false)
     private Group group;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "paid_by_id", nullable = false)
     private User paidBy;
