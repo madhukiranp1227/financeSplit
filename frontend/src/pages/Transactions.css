@@ -1,55 +1,32 @@
 .transactions-page { max-width: 900px; }
 
-.tx-summary {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-bottom: 20px;
-}
-
-.tx-sum-item {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 14px 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.tx-sum-item span { font-size: 0.82rem; color: var(--muted); }
-.tx-sum-item strong { font-size: 1.1rem; font-weight: 700; }
+.tx-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+.tx-sum-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; }
+.tx-sum-item span { font-size: 0.8rem; color: var(--muted); }
+.tx-sum-item strong { font-size: 1.05rem; font-weight: 700; }
 .tx-sum-item.income strong { color: var(--success); }
 .tx-sum-item.expense strong { color: var(--danger); }
 
 .filter-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
-.filter-tab { padding: 7px 18px; border-radius: 50px; border: 1px solid var(--border); background: transparent; color: var(--muted); font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+.filter-tab { padding: 7px 18px; border-radius: 50px; border: 1px solid var(--border); background: transparent; color: var(--muted); font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
 .filter-tab:hover { border-color: var(--primary); color: var(--primary); }
-.filter-tab.active { background: var(--gradient); color: #fff; border-color: transparent; }
+.filter-tab.active { background: var(--primary); color: #080c14; border-color: transparent; }
 
 .tx-list { display: flex; flex-direction: column; gap: 8px; }
 
-.tx-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 14px 16px;
-  transition: border-color 0.2s;
-}
-.tx-item:hover { border-color: var(--primary); }
+.tx-item { display: flex; align-items: center; gap: 14px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; transition: border-color 0.2s; }
+.tx-item:hover { border-color: rgba(34,211,160,0.25); }
 
-.tx-icon { font-size: 1.4rem; width: 36px; text-align: center; flex-shrink: 0; }
+.tx-icon { font-size: 1.3rem; width: 34px; text-align: center; flex-shrink: 0; }
 .tx-info { flex: 1; }
-.tx-title { font-size: 0.92rem; font-weight: 600; }
-.tx-meta { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
-.tx-amount { font-size: 1rem; font-weight: 700; }
+.tx-title { font-size: 0.9rem; font-weight: 600; }
+.tx-meta { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
+.tx-amount { font-size: 0.95rem; font-weight: 700; }
 .tx-amount.income { color: var(--success); }
 .tx-amount.expense { color: var(--danger); }
 .tx-actions { display: flex; gap: 6px; }
-.icon-btn { background: none; border: none; cursor: pointer; font-size: 0.9rem; padding: 4px 6px; border-radius: 6px; transition: background 0.2s; }
-.icon-btn:hover { background: rgba(255,255,255,0.08); }
+.icon-btn { background: none; border: none; cursor: pointer; font-size: 0.88rem; padding: 4px 6px; border-radius: 6px; transition: background 0.2s; }
+.icon-btn:hover { background: rgba(255,255,255,0.07); }
 
 .empty-state { text-align: center; padding: 40px; color: var(--muted); }
 .link-btn { background: none; border: none; color: var(--primary); cursor: pointer; font-weight: 600; }
