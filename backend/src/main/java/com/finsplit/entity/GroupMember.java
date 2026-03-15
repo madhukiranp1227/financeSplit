@@ -1,6 +1,7 @@
 package com.finsplit.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,7 +21,7 @@ public class GroupMember {
     @JoinColumn(name = "group_id", nullable = false)
     private Group group;
 
-    @JsonIgnore
+    @JsonIgnoreProperties({"transactions","createdGroups","hibernateLazyInitializer","handler"})
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
