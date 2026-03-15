@@ -84,8 +84,10 @@ const Transactions = () => {
   useEffect(() => { load() }, [filter])
 
   const handleSave = async (form) => {
-    if (editTx) await api.put(`/transactions/${editTx.id}`, form)
-    else await api.post('/transactions', form)
+    const payload = { ...form }
+    if (!payload.category) delete payload.category
+    if (editTx) await api.put(`/transactions/${editTx.id}`, payload)
+    else await api.post('/transactions', payload)
     setShowModal(false); setEditTx(null); load()
   }
 

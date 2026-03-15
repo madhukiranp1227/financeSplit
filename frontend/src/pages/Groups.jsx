@@ -43,7 +43,7 @@ const Groups = () => {
       ) : (
         <div className="groups-grid">
           {groups.map(g => (
-            <Link to={`/groups/${g.id}`} key={g.id} className="group-card">
+            <Link to={`/app/groups/${g.id}`} key={g.id} className="group-card">
               <div className="group-type-icon">{TYPE_ICONS[g.type] || '👥'}</div>
               <div className="group-info">
                 <h3 className="group-name">{g.name}</h3>
