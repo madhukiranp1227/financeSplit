@@ -13,7 +13,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError(''); setLoading(true)
-    try { await login(form.email, form.password); navigate('/') }
+    try { await login(form.email, form.password); navigate('/app') }
     catch { setError('Invalid email or password') }
     finally { setLoading(false) }
   }

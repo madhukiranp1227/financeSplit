@@ -13,9 +13,9 @@ const Layout = () => {
       <nav className="sidebar">
         <div className="sidebar-logo">💰 FinSplit</div>
         <ul className="nav-links">
-          <li><NavLink to="/" end className={({isActive}) => isActive ? 'active' : ''}>📊 Dashboard</NavLink></li>
-          <li><NavLink to="/transactions" className={({isActive}) => isActive ? 'active' : ''}>💸 Transactions</NavLink></li>
-          <li><NavLink to="/groups" className={({isActive}) => isActive ? 'active' : ''}>👥 Groups</NavLink></li>
+          <li><NavLink to="/app" end className={({isActive}) => isActive ? 'active' : ''}>📊 Dashboard</NavLink></li>
+          <li><NavLink to="/app/transactions" className={({isActive}) => isActive ? 'active' : ''}>💸 Transactions</NavLink></li>
+          <li><NavLink to="/app/groups" className={({isActive}) => isActive ? 'active' : ''}>👥 Groups</NavLink></li>
         </ul>
         <div className="sidebar-footer">
           <div className="user-info">

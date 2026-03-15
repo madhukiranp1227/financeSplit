@@ -13,7 +13,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError(''); setLoading(true)
-    try { await register(form.name, form.email, form.password, form.currency); navigate('/') }
+    try { await register(form.name, form.email, form.password, form.currency); navigate('/app') }
     catch (err) { setError(err.response?.data?.message || 'Registration failed') }
     finally { setLoading(false) }
   }
