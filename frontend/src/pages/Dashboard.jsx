@@ -83,7 +83,7 @@ const Dashboard = () => {
       <div className="page-header">
         <h1 className="page-title">Dashboard</h1>
         <p className="page-sub">Your financial overview</p>
-        <Link to="/transactions" className="btn btn-primary btn-sm">+ Add Transaction</Link>
+        <Link to="/app/transactions" className="btn btn-primary btn-sm">+ Add Transaction</Link>
       </div>
 
       {/* Summary Cards */}
